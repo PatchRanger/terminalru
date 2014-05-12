@@ -1,7 +1,7 @@
 Description
 ===========
 Terminalru: Simple product by category listing app.
-s
+
 Based on Silex, Doctrine, SQLite, phpUnit.
 
 Installation
@@ -17,28 +17,37 @@ If you didn't - please don't be upset, just follow these straight-forward steps:
 1. Download this repository to your local machine and setup it as a site to your
 server.
   Apache or built-in PHP server are welcome.
-  Make sure .htaccess file is included - otherwise create it manually.
+  Make sure .htaccess file is included - otherwise download it manually.
 
 2. Download Composer.
   For the easiest setup use this:
-    curl -sS https://getcomposer.org/installer | php
+
+  <code>curl -sS https://getcomposer.org/installer | php</code>
+
   Use getcomposer.org as a reference for additional info.
 
 3. Run
-    composer install
+
+  <code>composer install</code>
+
   (or
-    php composer.phar install
-  - it depends on how Composer is installed) at root of the folder, containing the project.
+
+  <code>php composer.phar install</code>
+
+  it depends on how Composer is installed) at root of the folder, containing the project.
   It will download all necessary libraries.
 
 4. Generate classes.
   Run
-    ./bin/doctrine orm:generate-entities --generate-annotations=1 src
+
+  <code>./bin/doctrine orm:generate-entities --generate-annotations=1 src</code>
+
   It will generate PHP-classes matching ORM entities.
 
 5. Update Composer autoloader.
   Run
-    php composer.phar update
+
+  <code>php composer.phar update</code>
 
 6. (optional as pre-filled database is included)
   Switch to MySQL.
@@ -47,9 +56,13 @@ server.
 
 7. (optional as pre-filled database is included, required for re-testing)
   Run
-    ./bin/doctrine orm:schema-tool:drop --force
+
+  <code>./bin/doctrine orm:schema-tool:drop --force</code>
+
   and then
-    ./bin/doctrine orm:schema-tool:update --force
+
+  <code>./bin/doctrine orm:schema-tool:update --force</code>
+
   It will re-create database schema.
 
 8. (optional as pre-filled database is included, required for re-testing)
@@ -57,7 +70,9 @@ server.
   Just make sure your server is running - and open the file using the corresponding
   site URL.
   Or simply run
-    php default_content.php
+
+  <code>php default_content.php</code>
+
   It will fill the database in with default content.
   Expected result: you see "Default content successfully created!" message.
 
@@ -65,7 +80,8 @@ server.
   It should display the list of all categories and all products.
 
 10. Run tests to make sure it works.
-  ./bin/phpunit
+
+  <code>./bin/phpunit</code>
 
 Explaining decisions
 ====================
