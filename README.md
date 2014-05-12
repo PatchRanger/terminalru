@@ -98,4 +98,4 @@ Features & Limitations
   Otherwise each test will add new portion of default content.
 - Tests cover all of the basic functionality needed - as TDD requires.
 - There are plenty of growing points to make the application even better.
-  Search for "@todo" to find them: https://github.com/PatchRanger/terminalru/search?q="%40todo"
+  [Search for "@todo"](https://github.com/PatchRanger/terminalru/search?q="%40todo") to find them.
