@@ -1,0 +1,29 @@
+Terminalru\Entity\Product:
+  type: entity
+  table: product
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    name:
+      type: string
+      length: 100
+      fixed: false
+      nullable: false
+  manyToMany:
+    categories:
+      targetEntity: Terminalru\Entity\Category
+      inversedBy: products
+      joinTable:
+        name: product_category
+        joinColumns:
+          product_id:
+            referencedColumnName: id
+        inverseJoinColumns:
+          category_id:
+            referencedColumnName: id
+  lifecycleCallbacks: {  }

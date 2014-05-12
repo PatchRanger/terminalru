@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <style type="text/css">
+              #left_col {
+                float: left;
+                width: 50%;
+              }
+              #right_col {
+                float: right;
+                width: 50%;
+              }
+              #footer {
+                clear: both;
+                text-align: center;
+              }
+            </style>
+            <title>{% block title %}{% endblock %} - Terminalru</title>
+        {% endblock %}
+    </head>
+    <body>
+        <div id="header">{% block header %}{% endblock %}</div>
+        <div id="left_col">
+        {% block left_col %}
+          <h2>{% block left_col_title %}List of all categories{% endblock %}</h2>
+          <ul>
+          {% for category_name in categories %}
+            <li><a href="/{{ category_name }}">{{ category_name }}</a></li>
+          {% endfor %}
+          </ul>
+        {% endblock %}</div>
+        <div id="right_col">{% block right_col %}
+          <h2>{% block right_col_title %}List of all products{% endblock %}</h2>
+          <ul>
+          {% for product_name in products %}
+            <li>{{ product_name }}</li>
+          {% endfor %}
+          </ul>
+        {% endblock %}</div>
+        <div id="footer">
+            {% block footer %}
+                &copy; Copyright 2014.
+            {% endblock %}
+        </div>
+    </body>
+</html>

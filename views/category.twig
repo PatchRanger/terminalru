@@ -1,0 +1,10 @@
+{% extends "base.twig" %}
+
+{% block title %}Category "{{ category_name }}"{% endblock %}
+{% block head %}{{ parent() }}{% endblock %}
+{% block header %}<h1>Category "{{ category_name }}"</h1>{% endblock %}
+{% block left_col_title %}{{ parent() }}{% endblock %}
+{% block left_col %}{{ parent() }}{% endblock %}
+{% block right_col_title %}{{ parent() }} for category "{{ category_name }}"{% endblock %}
+{% block right_col %}{{ parent() }}{% endblock %}
+{% block footer %}{{ parent() }}{% endblock %}
